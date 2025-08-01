@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PriceOye website</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        body {
+            background: red;
+        }
+
+
+        .header {
+            background: #00aaff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            flex-wrap: wrap;
+        }
+
+        .logo-text {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .search-container {
+            background: white;
+            display: flex;
+            align-items: center;
+            border-radius: 6px;
+            overflow: hidden;
+            padding: 5px 10px;
+        }
+
+        .search-container input {
+            border: none;
+            outline: none;
+            font-size: 14px;
+            padding: 5px;
+        }
+
+        .mic-icon {
+            font-size: 18px;
+            color: #00aaff;
+            margin-left: 5px;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .auth-buttons button {
+            padding: 6px 12px;
+            font-size: 14px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .login-btn {
+            background: white;
+            color: #00aaff;
+        }
+
+        .register-btn {
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+
+
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            background: white;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            flex-wrap: wrap;
+        }
+
+        .category-item {
+            text-align: center;
+            font-size: 13px;
+        }
+
+        .category-icon {
+            width: 30px;
+            height: 30px;
+            display: block;
+            margin: 0 auto 5px;
+        }
+
+
+        .banner {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .banner img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            max-height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+
+        .section {
+            margin-top: 20px;
+            background: #00008b;
+            padding: 20px 10px;
+        }
+
+        .section-header {
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5px;
+        }
+
+        .section-header button {
+            background: white;
+            color: black;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+
+        .product-list {
+            display: flex;
+            overflow-x: auto;
+            padding: 10px 0;
+            gap: 10px;
+            background: transparent;
+            /* Blend with pink */
+        }
+
+        .product-card {
+            min-width: 150px;
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 10px;
+            flex-shrink: 0;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 120px;
+            object-fit: contain;
+            margin-bottom: 5px;
+        }
+
+
+        .product-name {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .price {
+            font-weight: bold;
+            color: green;
+            font-size: 14px;
+        }
+        .product-list {
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="logo-text">PriceOye.pk</div>
+        <div class="header-right">
+            <div class="search-container">
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="auth-buttons">
+                <button class="login-btn">Log in</button>
+                <button class="register-btn">Register</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="categories">
+        <div class="category-item">
+            <img class="category-icon" src="https://static.priceoye.pk/images/home/mobiles.webp" />
+            <div>Mobiles</div>
+        </div>
+        <div class="category-item">
+            <img class="category-icon" src="https://static.priceoye.pk/images/home/wireless-earbuds.webp" />
+            <div>Wireless Earbuds</div>
+        </div>
+        <div class="category-item">
+            <img class="category-icon" src="https://static.priceoye.pk/images/home/smart-watches.webp" />
+            <div>Smart Watches</div>
+        </div>
+        <div class="category-item">
+            <img class="category-icon" src="https://static.priceoye.pk/images/home/trimmers-shaver.webp" />
+            <div>Trimmers Shaver</div>
+        </div>
+    </div>
+
+
+    <div class="banner">
+        <img src="https://images.priceoye.pk/banners/pakistan-priceoye-slider-m1isc.jpg" />
+    </div>
+
+
+    <div class="section">
+        <div class="section-header">
+            <i><u>
+                    <h2>
+                        <div>Latest Wireless Earbuds</div>
+                    </h2>
+                </u></i>
+            <button>View All</button>
+        </div>
+        <div class="product-list">
+            <div class="product-card">
+                <img class="product-image"
+                    src="https://images.priceoye.pk/sony-wireless-noise-cancelling-headphones-wh-1000xm4-pakistan-priceoye-cj38h-270x270.webp" />
+                <div class="product-name">Sony Wireless Noise Cancelling...</div>
+                <div class="price">Rs. 64,999</div>
+            </div>
+            <div class="product-card">
+                <img class="product-image"
+                    src="https://images.priceoye.pk/sony-wh-1000xm5-wireless-anc-headphones-pakistan-priceoye-47oxf-270x270.webp" />
+                <div class="product-name">Sony WH-1000XM5 Wireless ANC...</div>
+                <div class="price">Rs. 74,999</div>
+            </div>
+            <div class="product-card">
+                <img class="product-image"
+                    src="https://images.priceoye.pk/audionic-wireless-airbuds-425-pakistan-priceoye-21zls-270x270.webp" />
+                <div class="product-name">Sony WH-1000XM5 Wireless ANC...</div>
+                <div class="price">Rs. 74,999</div>
+            </div>
+            <div class="product-card">
+                <img class="product-image"
+                    src="https://images.priceoye.pk/lenovo-he05x-neckband-wireless-pakistan-priceoye-bguye-270x270.webp" />
+                <div class="product-name">Sony WH-1000XM5 Wireless ANC...</div>
+                <div class="price">Rs. 74,999</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
